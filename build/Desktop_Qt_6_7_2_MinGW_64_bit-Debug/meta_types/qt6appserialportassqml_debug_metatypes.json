@@ -1,0 +1,874 @@
+[
+    {
+        "classes": [
+            {
+                "className": "IWriteStrategy",
+                "object": true,
+                "qualifiedClassName": "IWriteStrategy",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "IWriteStrategy.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "DataProcessor",
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "mode",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "setSendMode",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "mode",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "setReceiveMode",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "sendMode",
+                        "notify": "sendModeChanged",
+                        "read": "sendMode",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "DataProcessor",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "sendModeChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "dataprocessor.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "FileSender",
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "fileUrl",
+                                "type": "QUrl"
+                            }
+                        ],
+                        "name": "startSending",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "stopSending",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "isSending",
+                        "notify": "isSendingChanged",
+                        "read": "isSending",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "FileSender",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "isSendingChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "logMessage",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "name": "sendNextChunk",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "filesender.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "LogListModel",
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "direction",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "type",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "data",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "addLog",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "clear",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "folderPath",
+                                "type": "QUrl"
+                            }
+                        ],
+                        "name": "exportLog",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "LogListModel",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QAbstractListModel"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "loglistmodel.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "LogManager",
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "direction",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "type",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "data",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "addLog",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "clearLog",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "folderPath",
+                                "type": "QUrl"
+                            }
+                        ],
+                        "name": "exportLog",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "logListModel",
+                        "read": "logListModel",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "LogListModel*",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "autoScrollEnabled",
+                        "notify": "autoScrollEnabledChanged",
+                        "read": "autoScrollEnabled",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false,
+                        "write": "setAutoScrollEnabled"
+                    }
+                ],
+                "qualifiedClassName": "LogManager",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "autoScrollEnabledChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "msg",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "logMessage",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "logmanager.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "PortSettingsManager",
+                "methods": [
+                    {
+                        "access": "public",
+                        "name": "refreshPortList",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "baudRatesModel",
+                        "read": "baudRatesModel",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QStringList",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "dataBitsModel",
+                        "read": "dataBitsModel",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QStringList",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "stopBitsModel",
+                        "read": "stopBitsModel",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QStringList",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "parityModel",
+                        "read": "parityModel",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QStringList",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "availablePorts",
+                        "notify": "availablePortsChanged",
+                        "read": "availablePorts",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QStringList",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "duplexOptions",
+                        "read": "duplexOptions",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QStringList",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 6,
+                        "name": "currentBaudRate",
+                        "notify": "currentBaudRateChanged",
+                        "read": "currentBaudRate",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setCurrentBaudRate"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 7,
+                        "name": "currentDataBits",
+                        "notify": "currentDataBitsChanged",
+                        "read": "currentDataBits",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setCurrentDataBits"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 8,
+                        "name": "currentStopBits",
+                        "notify": "currentStopBitsChanged",
+                        "read": "currentStopBits",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setCurrentStopBits"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 9,
+                        "name": "currentParity",
+                        "notify": "currentParityChanged",
+                        "read": "currentParity",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setCurrentParity"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 10,
+                        "name": "currentDuplexOption",
+                        "notify": "currentDuplexOptionChanged",
+                        "read": "currentDuplexOption",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setCurrentDuplexOption"
+                    }
+                ],
+                "qualifiedClassName": "PortSettingsManager",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "currentBaudRateChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "currentDataBitsChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "currentStopBitsChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "currentParityChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "availablePortsChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "currentDuplexOptionChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "portsettingsmanager.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "SerialPortManager",
+                "enums": [
+                    {
+                        "isClass": false,
+                        "isFlag": false,
+                        "name": "DuplexMode",
+                        "values": [
+                            "FullDuplex",
+                            "HalfDuplex"
+                        ]
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "SerialPortManager",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "portOpened",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "error",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "errorOccurred",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "data",
+                                "type": "QByteArray"
+                            }
+                        ],
+                        "name": "dataReceived",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "portClosed",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "serialportmanager.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "SerialPortViewModel",
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "portName",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "connectPort",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "disconnectPort",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "clearByteCounts",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "text",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "sendData",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "enabled",
+                                "type": "bool"
+                            },
+                            {
+                                "name": "interval",
+                                "type": "int"
+                            },
+                            {
+                                "name": "data",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "setAutoSend",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "settingsManager",
+                        "read": "settingsManager",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "PortSettingsManager*",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "logManager",
+                        "read": "logManager",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "LogManager*",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "dataProcessor",
+                        "read": "dataProcessor",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "DataProcessor*",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "fileSender",
+                        "read": "fileSender",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "FileSender*",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "isConnected",
+                        "notify": "connectionStatusChanged",
+                        "read": "isConnected",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "sentBytesCount",
+                        "notify": "sentBytesCountChanged",
+                        "read": "sentBytesCount",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "qint64",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 6,
+                        "name": "receivedBytesCount",
+                        "notify": "receivedBytesCountChanged",
+                        "read": "receivedBytesCount",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "qint64",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 7,
+                        "name": "autoSendEnabled",
+                        "notify": "autoSendEnabledChanged",
+                        "read": "autoSendEnabled",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 8,
+                        "name": "autoSendInterval",
+                        "notify": "autoSendIntervalChanged",
+                        "read": "autoSendInterval",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "SerialPortViewModel",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "autoSendEnabledChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "autoSendIntervalChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "isOpen",
+                                "type": "bool"
+                            },
+                            {
+                                "name": "portName",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "connectionStatusChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "sentBytesCountChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "receivedBytesCountChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "data",
+                                "type": "QByteArray"
+                            }
+                        ],
+                        "name": "onDataReceived",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "errorString",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "onErrorOccurred",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "onPortOpened",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "onPortClosed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "name": "onAutoSendTimeout",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "onFileSenderLog",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "serialportviewmodel.h",
+        "outputRevision": 68
+    }
+]

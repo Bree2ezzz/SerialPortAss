@@ -1,0 +1,17 @@
+{
+    "classes": [
+        {
+            "className": "IWriteStrategy",
+            "object": true,
+            "qualifiedClassName": "IWriteStrategy",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "IWriteStrategy.h",
+    "outputRevision": 68
+}

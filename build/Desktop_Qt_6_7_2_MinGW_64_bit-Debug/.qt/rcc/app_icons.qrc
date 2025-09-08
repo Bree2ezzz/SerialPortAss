@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="/icon">
+    <file alias="test.jpg">E:/SerialPortAssQml/SerialPortAssQml/test.jpg</file>
+    <file alias="up.png">E:/SerialPortAssQml/SerialPortAssQml/up.png</file>
+    <file alias="upload.png">E:/SerialPortAssQml/SerialPortAssQml/upload.png</file>
+    <file alias="down.png">E:/SerialPortAssQml/SerialPortAssQml/down.png</file>
+    <file alias="bidirection.png">E:/SerialPortAssQml/SerialPortAssQml/bidirection.png</file>
+    <file alias="clear1.png">E:/SerialPortAssQml/SerialPortAssQml/clear1.png</file>
+    <file alias="clear2.png">E:/SerialPortAssQml/SerialPortAssQml/clear2.png</file>
+  </qresource>
+</RCC>
+

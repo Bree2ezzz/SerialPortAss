@@ -1,0 +1,12 @@
+-I
+E:/SerialPortAssQml/SerialPortAssQml/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug
+-I
+D:/qt/6.7.2/mingw_64/./qml
+--resource
+E:/SerialPortAssQml/SerialPortAssQml/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/.qt/rcc/qmake_SerialPortAssQml.qrc
+--resource
+E:/SerialPortAssQml/SerialPortAssQml/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/.qt/rcc/appSerialPortAssQml_raw_qml_0.qrc
+--resource
+E:/SerialPortAssQml/SerialPortAssQml/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/.qt/rcc/app_icons.qrc
+--module
+SerialPortAssQml

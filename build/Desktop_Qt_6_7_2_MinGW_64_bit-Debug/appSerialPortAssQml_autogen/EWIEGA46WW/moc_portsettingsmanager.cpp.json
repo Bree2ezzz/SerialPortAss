@@ -1,0 +1,212 @@
+{
+    "classes": [
+        {
+            "className": "PortSettingsManager",
+            "methods": [
+                {
+                    "access": "public",
+                    "name": "refreshPortList",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "baudRatesModel",
+                    "read": "baudRatesModel",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QStringList",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "dataBitsModel",
+                    "read": "dataBitsModel",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QStringList",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "stopBitsModel",
+                    "read": "stopBitsModel",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QStringList",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "name": "parityModel",
+                    "read": "parityModel",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QStringList",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 4,
+                    "name": "availablePorts",
+                    "notify": "availablePortsChanged",
+                    "read": "availablePorts",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QStringList",
+                    "user": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 5,
+                    "name": "duplexOptions",
+                    "read": "duplexOptions",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QStringList",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 6,
+                    "name": "currentBaudRate",
+                    "notify": "currentBaudRateChanged",
+                    "read": "currentBaudRate",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "setCurrentBaudRate"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 7,
+                    "name": "currentDataBits",
+                    "notify": "currentDataBitsChanged",
+                    "read": "currentDataBits",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "setCurrentDataBits"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 8,
+                    "name": "currentStopBits",
+                    "notify": "currentStopBitsChanged",
+                    "read": "currentStopBits",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "setCurrentStopBits"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 9,
+                    "name": "currentParity",
+                    "notify": "currentParityChanged",
+                    "read": "currentParity",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "setCurrentParity"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 10,
+                    "name": "currentDuplexOption",
+                    "notify": "currentDuplexOptionChanged",
+                    "read": "currentDuplexOption",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "setCurrentDuplexOption"
+                }
+            ],
+            "qualifiedClassName": "PortSettingsManager",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "currentBaudRateChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "currentDataBitsChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "currentStopBitsChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "currentParityChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "availablePortsChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "currentDuplexOptionChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "portsettingsmanager.h",
+    "outputRevision": 68
+}

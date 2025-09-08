@@ -1,0 +1,106 @@
+{
+    "classes": [
+        {
+            "className": "LogManager",
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "direction",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "type",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "data",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "addLog",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "clearLog",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "folderPath",
+                            "type": "QUrl"
+                        }
+                    ],
+                    "name": "exportLog",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "logListModel",
+                    "read": "logListModel",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "LogListModel*",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "autoScrollEnabled",
+                    "notify": "autoScrollEnabledChanged",
+                    "read": "autoScrollEnabled",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false,
+                    "write": "setAutoScrollEnabled"
+                }
+            ],
+            "qualifiedClassName": "LogManager",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "autoScrollEnabledChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "type",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "msg",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "logMessage",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "logmanager.h",
+    "outputRevision": 68
+}

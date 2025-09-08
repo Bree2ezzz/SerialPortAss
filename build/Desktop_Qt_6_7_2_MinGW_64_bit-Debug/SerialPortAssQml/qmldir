@@ -1,0 +1,10 @@
+module SerialPortAssQml
+typeinfo appSerialPortAssQml.qmltypes
+prefer :/SerialPortAssQml/
+Main 1.0 Main.qml
+BlackBGBtn 1.0 BlackBGBtn.qml
+ToggleTextButton 1.0 ToggleTextButton.qml
+TransparentBtn 1.0 TransparentBtn.qml
+AutoSendDialog 1.0 AutoSendDialog.qml
+PortSelectionDialog 1.0 PortSelectionDialog.qml
+

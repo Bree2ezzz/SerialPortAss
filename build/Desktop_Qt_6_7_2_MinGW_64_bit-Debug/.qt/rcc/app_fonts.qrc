@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/font">
+    <file alias="ComicMono.ttf">E:/SerialPortAssQml/SerialPortAssQml/ComicMono.ttf</file>
+  </qresource>
+</RCC>
+

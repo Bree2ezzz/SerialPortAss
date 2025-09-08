@@ -1,0 +1,51 @@
+# C++/Qt Build Artifacts
+###########################
+*.o
+*.obj
+*.lo
+*.la
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+*.out
+*.app
+*.pdb
+*.ilk
+*.suo
+*.user
+
+# Qt Creator specific
+###########################
+.qtcreator/
+*.pro.user
+*.pro.user.*
+*.cmake.user
+*.cmake.user.*
+
+# Log files
+###########################
+*.log
+*.txt
+
+# Temporary files
+###########################
+*~
+*.swp
+*.tmp
+*.temp
+temp/
+
+# Configuration files
+###########################
+# 忽略敏感配置文件，例如数据库连接信息
+# my-config.json
+# config.ini
+
+# IDE-specific files
+###########################
+.vscode/
+.idea/
+.vs/
+nbproject/
