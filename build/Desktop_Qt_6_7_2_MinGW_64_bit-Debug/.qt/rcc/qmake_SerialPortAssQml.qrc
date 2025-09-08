@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/SerialPortAssQml">
-    <file alias="qmldir">E:/SerialPortAssQml/SerialPortAssQml/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/SerialPortAssQml/qmldir</file>
-  </qresource>
-</RCC>
-

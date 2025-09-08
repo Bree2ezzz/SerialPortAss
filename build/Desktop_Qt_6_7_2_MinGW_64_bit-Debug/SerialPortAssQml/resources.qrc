@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/font">
-        <file>ComicMono.ttf</file>
-    </qresource>
-    <qresource prefix="/icon">
-        <file>test.jpg</file>
-    </qresource>
-</RCC>
