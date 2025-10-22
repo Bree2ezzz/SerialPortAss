@@ -49,3 +49,5 @@ temp/
 .idea/
 .vs/
 nbproject/
+AGENTS.md
+build/
