@@ -57,11 +57,10 @@ void SerialPortViewModel::sendData(const QString &text)
     QByteArray data = m_dataProcessor->prepareDataForSend(text, ok, error);
 
     if (ok) {
-        m_sentBytesCount += data.size();
-        emit sentBytesCountChanged();
-
         if(m_serialPortManager->write(data)){
-        m_logManager->addLog("TX", m_dataProcessor->sendMode(), text);
+            m_sentBytesCount += data.size();
+            emit sentBytesCountChanged();
+            m_logManager->addLog("TX", m_dataProcessor->sendMode(), text);
         }
     } else {
         onErrorOccurred(error);

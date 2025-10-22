@@ -31,7 +31,7 @@ signals:
 
 
 private:
-    IWriteStrategy* m_writeStrategy; // 持有当前写入策略的指针
+    IWriteStrategy* m_writeStrategy = nullptr; // 持有当前写入策略的指针
     QSerialPort* m_serialPort;
     void onReadyRead();
     void onErrorOccurred(QSerialPort::SerialPortError error);

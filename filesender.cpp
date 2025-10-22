@@ -92,7 +92,13 @@ void FileSender::sendNextChunk()
 
     QByteArray chunk = m_file.read(CHUNK_SIZE);
     if (!chunk.isEmpty()) {
-        m_serialPortManager->write(chunk);
+        if (!m_serialPortManager->write(chunk)) {
+            m_sendTimer->stop();
+            m_file.close();
+            setIsSending(false);
+            emit logMessage("错误：串口发送失败，文件传输中断。");
+            return;
+        }
         m_sentBytes += chunk.size();
 
         int currentProgress = (m_sentBytes * 100) / m_totalBytes;

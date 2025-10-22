@@ -5,10 +5,15 @@
 #include <QJsonObject>
 #include <QJsonDocument>
 
-LogListModel::LogListModel(QObject *parent){}
+LogListModel::LogListModel(QObject *parent)
+    : QAbstractListModel(parent)
+{}
 
 int LogListModel::rowCount(const QModelIndex &parent) const
 {
+    if (parent.isValid()) {
+        return 0;
+    }
     return m_logs.size();
 }
 
@@ -63,10 +68,20 @@ void LogListModel::clear()
 
 void LogListModel::exportLog(const QUrl &folderPath)
 {
+    writeLogs(folderPath, snapshot());
+}
+
+QList<LogEntry> LogListModel::snapshot() const
+{
+    return m_logs;
+}
+
+bool LogListModel::writeLogs(const QUrl &folderPath, const QList<LogEntry> &logs)
+{
     QString localFolderPath = folderPath.toLocalFile();
     if (localFolderPath.isEmpty()) {
         qWarning() << "无效的导出路径。";
-        return;
+        return false;
     }
     qDebug() << " 开始拼接";
     QDir dir(localFolderPath);
@@ -78,11 +93,11 @@ void LogListModel::exportLog(const QUrl &folderPath)
     QFile file(fullPath);
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
         qWarning() << "无法打开文件进行写入:" << file.errorString();
-        return;
+        return false;
     }
     qDebug() << " 打开文件成功";
     QJsonArray logArray;
-    for(auto const& log : m_logs){
+    for(auto const& log : logs){
         QJsonObject object;
         object["timestamp"] = log.timestamp.toString(Qt::ISODateWithMs);
         object["direction"] = (log.direction == "TX" ? "Sent" :
@@ -97,4 +112,5 @@ void LogListModel::exportLog(const QUrl &folderPath)
     file.write(doc.toJson());
     file.close();
     qDebug() << "写入文件成功";
+    return true;
 }

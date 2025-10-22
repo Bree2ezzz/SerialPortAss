@@ -5,7 +5,7 @@ class HalfDuplexWriteStrategy : public IWriteStrategy
 {
 public:
     using IWriteStrategy::IWriteStrategy;
-    void write(QSerialPort* port,const QByteArray& data) override;
+    qint64 write(QSerialPort* port,const QByteArray& data) override;
 };
 
 #endif // HALFDUPLEXWRITESTRATEGY_H

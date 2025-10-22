@@ -33,15 +33,9 @@ void LogManager::exportLog(const QUrl &folderPath)
     }
     qDebug() << "开始导出";
 
-    QtConcurrent::run([this, folderPath]() {
-/*        bool success = */m_logListModel->exportLog(folderPath);
-        // if (success) {
-        //     qDebug() << "Log exported successfully to:" << fileUrl.toLocalFile();
-        //     emit logMessage("Success", "日志导出成功");
-        // } else {
-        //     qWarning() << "Failed to export log to:" << fileUrl.toLocalFile();
-        //     emit logMessage("Error", "日志导出失败");
-        // }
+    const QList<LogEntry> logsCopy = m_logListModel->snapshot();
+    QtConcurrent::run([folderPath, logsCopy]() {
+        LogListModel::writeLogs(folderPath, logsCopy);
     });
 }
 

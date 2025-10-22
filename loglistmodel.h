@@ -2,6 +2,7 @@
 #define LOGLISTMODEL_H
 
 #include <QAbstractListModel>
+#include <QList>
 #include "logentry.h"
 #include <QUrl>
 class LogListModel : public QAbstractListModel
@@ -26,6 +27,8 @@ public:
     Q_INVOKABLE void clear();
     Q_INVOKABLE void exportLog(const QUrl &folderPath);
 
+    QList<LogEntry> snapshot() const;
+    static bool writeLogs(const QUrl &folderPath, const QList<LogEntry> &logs);
 
 private:
     QList<LogEntry> m_logs;

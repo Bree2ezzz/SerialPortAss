@@ -13,8 +13,10 @@ SerialPortManager::SerialPortManager(QObject *parent)
 
 void SerialPortManager::setDuplexMode(DuplexMode mode)
 {
-    delete m_writeStrategy;
-    m_writeStrategy = nullptr;
+    if (m_writeStrategy) {
+        delete m_writeStrategy;
+        m_writeStrategy = nullptr;
+    }
 
     // 根据模式创建新的策略实例
     if (mode == FullDuplex) {
@@ -55,7 +57,13 @@ bool SerialPortManager::write(const QByteArray &data)
     }
     // 将写入任务委托给当前的策略对象
     if (m_writeStrategy) {
-        m_writeStrategy->write(m_serialPort, data);
+        const qint64 bytesWritten = m_writeStrategy->write(m_serialPort, data);
+        if (bytesWritten < 0 || bytesWritten != data.size()) {
+            emit errorOccurred(m_serialPort->errorString().isEmpty()
+                               ? QStringLiteral("串口写入失败")
+                               : m_serialPort->errorString());
+            return false;
+        }
     }
     return true;
 }
